@@ -1,4 +1,4 @@
-#docker network create --driver bridge --subnet=172.30.10.0/24 wp-net
+#docker network create --driver bridge --subnet=172.30.10.0/24 web-net
 
 version: "3.4"
 
@@ -22,13 +22,13 @@ services:
       - "80:80/tcp"
       - "443:443/tcp"
     environment:
-      TZ: 'America/Chicago'
-      WEBPASSWORD: '2547561'
+      TZ: 'Iran/Tehran'
+      WEBPASSWORD: '******'
       # WEBPASSWORD: 'set a secure password here or it will be random'
     # Volumes store your data between container upgrades
     volumes:
-       - '/mnt/PKG/Docker/Volume/Pi-Hole/etc/pihole/:/etc/pihole/'
-       - '/mnt/PKG/Docker/Volume/Pi-Hole/etc/dnsmasq.d/:/etc/dnsmasq.d/'
+       - '/me/Docker/Volume/Pi-Hole/etc/pihole/:/etc/pihole/'
+       - '/me/Docker/Volume/Pi-Hole/etc/dnsmasq.d/:/etc/dnsmasq.d/'
       #- './etc-pihole/:/etc/pihole/'
       #- './etc-dnsmasq.d/:/etc/dnsmasq.d/'
     # Recommended but not required (DHCP needs NET_ADMIN)
